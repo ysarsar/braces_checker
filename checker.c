@@ -6,7 +6,7 @@
 /*   By: ysarsar <ysarsar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 02:21:21 by ysarsar           #+#    #+#             */
-/*   Updated: 2020/11/22 05:43:26 by ysarsar          ###   ########.fr       */
+/*   Updated: 2020/11/22 05:56:53 by ysarsar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,11 @@ int		braces_checker(char *str)
 				return (0);
 			i++;
 		}
-		if (str[i] == '}')
+		if (str[i--] == '}')
 		{
-			i--;
 			while ((str[i] == ' ' || str[i] == '\t') && i > 0)
 				i--;
-			if (str[i] == ';')
-				return (1);
-			return (0);
+			return (str[i] == ';' ? 1 : 0);
 		}
 		return (-1);
 	}
