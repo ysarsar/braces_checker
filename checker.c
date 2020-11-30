@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ysarsar <ysarsar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mrxy <mrxy@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 02:21:21 by ysarsar           #+#    #+#             */
-/*   Updated: 2020/11/22 05:56:53 by ysarsar          ###   ########.fr       */
+/*   Updated: 2020/11/30 15:30:59 by mrxy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int		braces_checker(char *str)
 				i--;
 			return (str[i] == ';' ? 1 : 0);
 		}
-		return (-1);
+		return (0);
 	}
 	return (0);
 }
